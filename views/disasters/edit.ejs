@@ -1,0 +1,26 @@
+<p>Edit a Disaster...Why?</p>
+<p>It's already perfect</p>
+
+<form action="/disasters/<%= disaster.id %>" method="put" class="edit-form">
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input type="text" name="country" id="country" class="form-control" value="<%= disaster.country  %>">
+  </div>
+  <div class="form-group">
+    <label for="disaster_type">Disaster</label>
+    <input type="text" name="disaster_type" id="disaster_type" class="form-control" value="<%= disaster.disaster_type  %>">
+  </div>
+  <div class="form-group">
+    <label for="casualties">Number of Human Casualties</label>
+    <input type="text" name="casualties" id="casualties" class="form-control" value="<%= disaster.casualties %>">
+  </div>
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date" class="form-control" value="<%= disaster.date %>">
+  </div>
+  <div class="form-group">
+    <label for="time">Time</label>
+    <input type="time" name="time" id="time" class="form-control" value="<%= disaster.time %>">
+  </div>
+  <input type="submit" value="Edit">
+</form>

@@ -1,0 +1,28 @@
+<h2>A History of Disaster</h2>
+
+<div id="disasterList">
+  <table>
+    <tr>
+      <th>Country</th>
+      <th>Disaster</th>
+      <th>Human Casualties</th>
+      <th class="dateTableName">Date</th>
+      <th></th>
+    </tr>
+    <% disasters.forEach(function(disaster){ %>
+      <tr>
+        <td><a href="/disasters/<%= disaster.id %>"><%= disaster.country %></a></td>
+        <td><%= disaster.disaster_type %></td>
+        <td><%= disaster.casualties %></td>
+        <td><%= moment(disaster.date).format('MMMM Do YYYY, h:mm a') %></td>
+        <td>
+          <a href="/disasters/<%= disaster.id %>" class=" btn btn-info delete" style="background-color: red" style="color: black">Delete</a>
+          <a href="/disasters/<%= disaster.id %>/edit" class=" btn btn-info edit" style="background-color: gold">Edit</a>
+        </td>
+        <td>
+          <%= moment(disaster.date, "YYYYMMDD").fromNow(); %>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</div>

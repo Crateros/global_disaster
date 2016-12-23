@@ -1,0 +1,108 @@
+
+
+@font-face {
+    font-family: Army;
+    src: url("../fonts/Army.ttf");
+}
+
+.mainTitle {
+    font-size: 4em;
+    color:rgb(255, 0, 0);
+}
+
+.blackOps {
+    font-family: "Black Ops One", sans-serif;
+}
+.currentTime {
+  font-family: "Black Ops One", sans-serif;
+  font-size: 2em;
+}
+
+body {
+    background-image: url(world.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 1300px;
+    height: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 5px solid white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.row {
+    margin: 0 auto;
+}
+
+#submitForm {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(/img/nuke.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 275px;
+    vertical-align: bottom;
+    font-family: "Black Ops One", sans-serif;
+    color: black;
+    font-size: 1.5em
+}
+
+.grow:hover { transform: scale(1.1); }
+
+
+#mainContent {
+    border: 1px solid #dddddd;
+    height: 650px;
+    margin: 10px 0;
+}
+
+#secondaryContent {
+    border: 1px solid #dddddd;
+    height: 650px;
+    margin: 10px 0;
+}
+
+#disasterList, #timeUntil {
+    overflow-x: auto;
+    height: 550px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+}
+
+.dateTableName {
+    width: 45%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.about {
+  font-size: 3em;
+  margin-top: 15px;
+  background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.tableButtons {
+    background-color: transparent;
+    display: inline-block;
+    width: 110%;
+}

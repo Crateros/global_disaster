@@ -1,0 +1,6 @@
+
+  <% disasters.forEach(function(disaster){ %>
+    <ul>
+      <li><%= disaster.country %> <%= moment(disaster.date).format('MMMM Do YYYY, h:mm a') %> </li>
+    </ul>
+  <% }) %>

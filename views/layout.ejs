@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/moment.js"></script>
+    <title>Global Disaster Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center blackOps mainTitle">Global Disaster Tracker</h1>
+      <hr>
+        <a href="/disasters" class="btn btn-info blackOps" style="background-color: red">DISASTERS</a>
+        <a href="/disasters/new" class="btn btn-info blackOps" style="background-color: green">Remember a Tragedy!</a>
+        <a href="/about" class="btn btn-info blackOps" style="background-color: rgb(233, 195, 0)">About</a>
+      <div class="row">
+        <div class="col-xs-6 col-centered" id="mainContent">
+          <div class="currentTime"></div>
+          <div id="timeUntil">
+            <% disasters.forEach(function(disaster){ %>
+              <ul>
+                <li><%= disaster.disaster_type %> | <%= disaster.country %> | <%= moment(disaster.date, "YYYYMMDD").fromNow(); %></li>
+              </ul>
+            <% }) %>
+          </div>
+        </div>
+        <div class="col-xs-6 col-centered" id="secondaryContent">
+          <%- body %>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
